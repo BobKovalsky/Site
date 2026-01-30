@@ -1,11 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sunkiss — Салон загара</title>
+    <style>
+        :root{--bg:#FFF7E6;--accent:#FFB74D;--dark:#2b2b2b}
+        *{box-sizing:border-box}
+        body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:var(--bg);color:var(--dark);-webkit-font-smoothing:antialiased}
+        header{background:linear-gradient(180deg,#FFDFAF 0%, #FFECCF 60%);padding:18px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+        .logo{display:flex;align-items:center;gap:12px;font-weight:700}
+        .logo .mark{width:44px;height:44px;background:radial-gradient(circle at 30% 30%, #fff8e6 0%, #ffd26a 30%, #ff9f1c 100%);border-radius:50%;box-shadow:0 4px 12px rgba(255,159,28,.18)}
+        nav{display:none}
+        .hero{min-height:60vh;display:flex;align-items:center;justify-content:center;padding:48px 20px;background:linear-gradient(180deg, rgba(255,183,77,0.12), rgba(255,159,28,0.06));}
+        .hero-inner{max-width:1000px;width:100%;display:grid;grid-template-columns:1fr;gap:20px;align-items:center}
+        .hero-card{background:white;border-radius:14px;padding:28px;box-shadow:0 8px 30px rgba(43,43,43,.08)}
+        h1{margin:0 0 8px;font-size:28px}
+        p.lead{margin:0 0 16px;color:#6b6b6b}
+        .buttons{display:flex;gap:12px;flex-wrap:wrap}
+        .btn{background:var(--accent);color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600}
+        .btn.alt{background:transparent;color:var(--dark);border:2px solid rgba(43,43,43,.08)}
+        .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:28px 20px}
+        .card{background:white;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(43,43,43,.04)}
+        .card h3{margin:0 0 8px}
+        .contact{display:flex;flex-direction:column;gap:12px;padding:20px}
+        footer{padding:18px 20px;text-align:center;color:#6b6b6b;font-size:14px}
+        .grid-2{display:grid;grid-template-columns:1fr 320px;gap:20px}
+        @media (max-width:880px){.grid-2{grid-template-columns:1fr}.hero-inner{padding:0}}
+        .gallery{display:flex;gap:8px;flex-wrap:wrap}
+        .gallery img{width:calc(50% - 4px);border-radius:8px;height:120px;object-fit:cover}
+        .contact .item{display:flex;gap:12px;align-items:center}
+        .small{font-size:13px;color:#7a7a7a}
+    </style>
 </head>
 <body>
-    <div style="text-align:center"><h1>Hello World!!!</h1></div>
+    <header>
+        <div class="logo">
+            <div class="mark" aria-hidden="true"></div>
+            <div>
+                <div>Sunkiss</div>
+                <div class="small">Салон загара</div>
+            </div>
+        </div>
+        <nav>
+            <a href="#services">Услуги</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+        <div style="display:flex;gap:10px;align-items:center">
+            <a class="btn" href="#contact">Записаться</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-card">
+                <h1>Добро пожаловать в Sunkiss</h1>
+                <p class="lead">Премиум‑солярий и уход за кожей — ровный загар без риска. Удобное расположение, гибкое расписание и опытные мастера.</p>
+                <div class="buttons">
+                    <a class="btn" href="#contact">Записаться онлайн</a>
+                    <a class="btn alt" href="#services">Услуги и цены</a>
+                </div>
+            </div>
+
+            <div style="display:flex;gap:18px;flex-direction:column">
+                <div class="card">
+                    <h3>Почему выбирают нас</h3>
+                    <ul style="margin:8px 0 0;padding-left:18px;color:#555">
+                        <li>Современные солярии премиум-класса</li>
+                        <li>Индивидуальный подбор курса</li>
+                        <li>Чистота и комфорт</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Акция</h3>
+                    <p style="margin:8px 0 0">Первое посещение — скидка 20% при записи по телефону.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="services" class="services">
+            <div class="card">
+                <h3>Солярий</h3>
+                <p class="small">Оборудование последнего поколения, безопасные лампы, контролируемое время.</p>
+                <p style="margin:8px 0 0;font-weight:600">от 400 ₽ / сеанс</p>
+            </div>
+            <div class="card">
+                <h3>Спрей‑загар</h3>
+                <p class="small">Мгновенный бронзовый оттенок без УФ‑излучения.</p>
+                <p style="margin:8px 0 0;font-weight:600">от 1200 ₽</p>
+            </div>
+            <div class="card">
+                <h3>Уход за кожей</h3>
+                <p class="small">Пилинги, увлажняющие маски и консультации по домашнему уходу.</p>
+                <p style="margin:8px 0 0;font-weight:600">по записи</p>
+            </div>
+            <div class="card">
+                <h3>Абонементы</h3>
+                <p class="small">Экономные пакеты посещений для регулярного загара.</p>
+                <p style="margin:8px 0 0;font-weight:600">от 3500 ₽ / мес.</p>
+            </div>
+        </section>
+
+        <section id="gallery" style="padding:0 20px 20px">
+            <h2 style="margin:18px 0 12px">Галерея</h2>
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Галерея 1">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Галерея 2">
+                <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Галерея 3">
+                <img src="https://images.unsplash.com/photo-1526403224749-7a7f4e6d0d8b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Галерея 4">
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="grid-2">
+                <div>
+                    <h2>Контакты</h2>
+                    <div class="item"><strong>Адрес:</strong>&nbsp;ул. Перемоги, 12, Житомир</div>
+                    <div class="item"><strong>Телефон:</strong>&nbsp;<a href="tel:+74951234567">+7 (495) 123-45-67</a></div>
+                    <div class="item"><strong>Часы работы:</strong>&nbsp;Ежедневно 10:00–22:00</div>
+                    <p class="small" style="margin-top:12px">Приходите без записи или забронируйте удобное время по телефону.</p>
+                    <div style="margin-top:14px">
+                        <a class="btn" href="tel:+74951234567">Позвонить</a>
+                        <a class="btn alt" href="mailto:info@sunkiss.example">Написать</a>
+                    </div>
+                </div>
+
+                <aside style="background:white;border-radius:12px;padding:12px;box-shadow:0 6px 18px rgba(43,43,43,.04)">
+                    <h3 style="margin-top:0">Где мы</h3>
+                    <div style="width:100%;height:220px;border-radius:8px;overflow:hidden;background:#eee;display:flex;align-items:center;justify-content:center;color:#999">Карта (замена iframe)</div>
+                    <p class="small" style="margin-top:12px">Парковка рядом. Метро — 5 минут пешком.</p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © Sunkiss — Салон загара. Все права защищены.
+    </footer>
 </body>
 </html>
