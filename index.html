@@ -2,130 +2,97 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>IT Outsourcing | System Administrator</title>
+<title>SysAdmin | IT Support</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
+    box-sizing: border-box;
+    font-family: "Courier New", monospace;
 }
 
 body {
-    background: #0b1220;
-    color: #e5e7eb;
+    background: #020617;
+    color: #22c55e;
     line-height: 1.6;
 }
 
-header {
-    background: linear-gradient(135deg, #020617, #0b1220);
-    padding: 80px 20px;
-}
-
-.header-box {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.lang {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.lang button {
+/* ===== TERMINAL WINDOW ===== */
+.terminal {
+    max-width: 1000px;
+    margin: 40px auto;
     background: #020617;
-    border: 1px solid #1e293b;
-    color: #e5e7eb;
-    padding: 6px 10px;
-    margin-left: 5px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-}
-
-header p {
-    color: #94a3b8;
-    margin-bottom: 25px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 14px 28px;
-    background: #2563eb;
-    color: #fff;
-    text-decoration: none;
+    border: 2px solid #22c55e;
     border-radius: 8px;
-    font-weight: 600;
+    box-shadow: 0 0 30px rgba(34,197,94,0.2);
 }
 
-header img {
-    width: 100%;
-    border-radius: 14px;
+.header {
+    background: #020617;
+    padding: 10px 15px;
+    border-bottom: 2px solid #22c55e;
+    display: flex;
+    gap: 8px;
 }
 
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.red { background: #ef4444; }
+.yellow { background: #facc15; }
+.green { background: #22c55e; }
+
+.content {
+    padding: 25px;
+}
+
+.line {
+    margin-bottom: 10px;
+}
+
+.prompt {
+    color: #22c55e;
+}
+
+.cmd {
+    color: #e5e7eb;
+}
+
+/* ===== SECTIONS ===== */
 section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 70px 20px;
+    margin-top: 30px;
 }
 
 h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #22c55e;
 }
 
-.services, .benefits {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
+ul {
+    list-style: none;
 }
 
-.card {
-    background: #020617;
-    padding: 28px;
-    border-radius: 14px;
-    border: 1px solid #1e293b;
+li::before {
+    content: "› ";
+    color: #22c55e;
 }
 
-.about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.about img {
-    width: 100%;
-    border-radius: 14px;
-}
-
-.contact {
-    text-align: center;
-}
-
+/* ===== FOOTER ===== */
 footer {
-    background: #020617;
     text-align: center;
-    padding: 20px;
-    color: #64748b;
+    margin: 30px 0;
+    color: #16a34a;
+    font-size: 0.9rem;
 }
 
-@media (max-width: 800px) {
-    .header-box, .about {
-        grid-template-columns: 1fr;
-        text-align: center;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .terminal {
+        margin: 20px;
     }
 }
 </style>
@@ -133,124 +100,61 @@ footer {
 
 <body>
 
-<div class="lang">
-    <button onclick="setLang('ru')">RU</button>
-    <button onclick="setLang('ua')">UA</button>
-    <button onclick="setLang('en')">EN</button>
+<div class="terminal">
+    <div class="header">
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+    </div>
+
+    <div class="content">
+        <div class="line">
+            <span class="prompt">sysadmin@it:~$</span>
+            <span class="cmd">whoami</span>
+        </div>
+        <div class="line">System Administrator / IT Outsourcing</div>
+
+        <section>
+            <div class="line">
+                <span class="prompt">sysadmin@it:~$</span>
+                <span class="cmd">services</span>
+            </div>
+            <ul>
+                <li>IT-поддержка пользователей</li>
+                <li>Администрирование Windows / Linux</li>
+                <li>Сети, VPN, Mikrotik, Wi-Fi</li>
+                <li>Серверы, резервное копирование</li>
+                <li>IT-аутсорсинг для бизнеса</li>
+            </ul>
+        </section>
+
+        <section>
+            <div class="line">
+                <span class="prompt">sysadmin@it:~$</span>
+                <span class="cmd">why_me</span>
+            </div>
+            <ul>
+                <li>Быстрая реакция</li>
+                <li>Практичный подход</li>
+                <li>Без лишней бюрократии</li>
+                <li>Удалённо и с выездом</li>
+            </ul>
+        </section>
+
+        <section>
+            <div class="line">
+                <span class="prompt">sysadmin@it:~$</span>
+                <span class="cmd">contact</span>
+            </div>
+            <p>Email: admin@example.com</p>
+            <p>Telegram: @sysadmin</p>
+        </section>
+    </div>
 </div>
 
-<header>
-    <div class="header-box">
-        <div>
-            <h1 data-i18n="title"></h1>
-            <p data-i18n="subtitle"></p>
-            <a href="#contact" class="btn" data-i18n="button"></a>
-        </div>
-        <img src="https://images.unsplash.com/photo-1537432376769-00a0c1b6d5a1" alt="IT Support">
-    </div>
-</header>
-
-<section>
-    <h2 data-i18n="services_title"></h2>
-    <div class="services">
-        <div class="card" data-i18n="s1"></div>
-        <div class="card" data-i18n="s2"></div>
-        <div class="card" data-i18n="s3"></div>
-        <div class="card" data-i18n="s4"></div>
-    </div>
-</section>
-
-<section>
-    <h2 data-i18n="about_title"></h2>
-    <div class="about">
-        <div data-i18n="about_text"></div>
-        <img src="https://images.unsplash.com/photo-1581091012184-5c8d8f64c1c1" alt="Sysadmin">
-    </div>
-</section>
-
-<section>
-    <h2 data-i18n="why_title"></h2>
-    <div class="benefits">
-        <div class="card" data-i18n="b1"></div>
-        <div class="card" data-i18n="b2"></div>
-        <div class="card" data-i18n="b3"></div>
-    </div>
-</section>
-
-<section id="contact" class="contact">
-    <h2 data-i18n="contact_title"></h2>
-    <p>Email: it.support@example.com</p>
-    <p>Telegram: @it_support</p>
-</section>
-
 <footer>
-    © 2026 IT Outsourcing
+    © 2026 sysadmin@it
 </footer>
-
-<script>
-const texts = {
-    ru: {
-        title: "IT-аутсорсинг и системный администратор",
-        subtitle: "Поддержка компьютеров, серверов и сетей для бизнеса и частных клиентов",
-        button: "Связаться",
-        services_title: "Услуги",
-        s1: "🖥 IT-поддержка и настройка ПК",
-        s2: "🌐 Сети, Wi-Fi, VPN, Mikrotik",
-        s3: "🗄 Серверы и резервное копирование",
-        s4: "🔐 Информационная безопасность",
-        about_title: "Обо мне",
-        about_text: "Частный системный администратор. Удобная альтернатива штатному IT-специалисту.",
-        why_title: "Почему я",
-        b1: "⚡ Быстро реагирую",
-        b2: "💼 Опыт работы с бизнесом",
-        b3: "🔧 Практичные решения",
-        contact_title: "Контакты"
-    },
-    ua: {
-        title: "IT-аутсорсинг та системний адміністратор",
-        subtitle: "Підтримка комп'ютерів, серверів і мереж",
-        button: "Звʼязатися",
-        services_title: "Послуги",
-        s1: "🖥 IT-підтримка та налаштування ПК",
-        s2: "🌐 Мережі, Wi-Fi, VPN, Mikrotik",
-        s3: "🗄 Сервери та резервне копіювання",
-        s4: "🔐 Інформаційна безпека",
-        about_title: "Про мене",
-        about_text: "Приватний системний адміністратор для бізнесу та дому.",
-        why_title: "Чому я",
-        b1: "⚡ Швидка реакція",
-        b2: "💼 Досвід для бізнесу",
-        b3: "🔧 Практичні рішення",
-        contact_title: "Контакти"
-    },
-    en: {
-        title: "IT Outsourcing & System Administrator",
-        subtitle: "IT support for business and private clients",
-        button: "Contact me",
-        services_title: "Services",
-        s1: "🖥 IT support & PC setup",
-        s2: "🌐 Networks, Wi-Fi, VPN, Mikrotik",
-        s3: "🗄 Servers & backups",
-        s4: "🔐 IT security",
-        about_title: "About me",
-        about_text: "Freelance system administrator. Reliable IT outsourcing.",
-        why_title: "Why choose me",
-        b1: "⚡ Fast response",
-        b2: "💼 Business-oriented",
-        b3: "🔧 Practical solutions",
-        contact_title: "Contacts"
-    }
-};
-
-function setLang(lang) {
-    document.documentElement.lang = lang;
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-        el.innerText = texts[lang][el.dataset.i18n];
-    });
-}
-
-setLang("ru");
-</script>
 
 </body>
 </html>
