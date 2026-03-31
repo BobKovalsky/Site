@@ -50,9 +50,23 @@ body {
     padding: 25px;
 }
 
-.line {
-    margin-bottom: 10px;
-}
+    .contact-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .contact-row .contact-text {
+        flex: 1 1 300px;
+    }
+
+    .contact-row .contact-logo img {
+        width: 120px;
+        height: auto;
+    }
 
 .prompt {
     color: #22c55e;
@@ -147,9 +161,16 @@ footer {
                 <span class="prompt">sysadmin@it:~$</span>
                 <span class="cmd">contact</span>
             </div>
-            <p>Email: bob.kovalsky@ukr.net</p>
-            <p>Site: <a href="https://phone-bighearted-ivy.tilda.ws/" target="_blank">https://phone-bighearted-ivy.tilda.ws/</a></p>
-            <p>Telegram: https://t.me/B_o_B_Ka_76</p>
+            <div class="contact-row">
+                <div class="contact-text">
+                    <p>Email: bob.kovalsky@ukr.net</p>
+                    <p>Site: <a href="https://phone-bighearted-ivy.tilda.ws/" target="_blank">https://phone-bighearted-ivy.tilda.ws/</a></p>
+                    <p>Telegram: https://t.me/B_o_B_Ka_76</p>
+                </div>
+                <div class="contact-logo">
+                    <a target="_blank" href="https://tilda.cc/?r=n2o8ohj"><img alt="При поддержке Tilda.cc" src="https://optim.tildacdn.ink/tild3065-3139-4437-b435-643333346439/-/format/webp/photo-1573165265437-.jpg.webp"></a>
+                </div>
+            </div>
         </section>
     </div>
 </div>
