@@ -1,206 +1,152 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
-<meta charset="UTF-8">
-<title>SysAdmin | IT Support</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Courier New", monospace;
-}
-
-body {
-    background: #020617;
-    color: #22c55e;
-    line-height: 1.6;
-}
-
-.big-side-image {
-    position: fixed;
-    top: 120px;
-    right: 500px;
-    width: 550px;
-    max-height: 80vh;
-    object-fit: contain;
-    border: 2px solid #22c55e;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(34,197,94,0.3);
-    z-index: 10;
-    background: #020617;
-}
-
-.terminal {
-    margin-right: 320px;
-}
-
-/* ===== TERMINAL WINDOW ===== */
-.terminal {
-    max-width: 1000px;
-    margin: 40px auto;
-    background: #020617;
-    border: 2px solid #22c55e;
-    border-radius: 8px;
-    box-shadow: 0 0 30px rgba(34,197,94,0.2);
-}
-
-.header {
-    background: #020617;
-    padding: 10px 15px;
-    border-bottom: 2px solid #22c55e;
-    display: flex;
-    gap: 8px;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-.red { background: #ef4444; }
-.yellow { background: #facc15; }
-.green { background: #22c55e; }
-
-.content {
-    padding: 25px;
-}
-
-    .contact-row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-top: 10px;
-    }
-
-    .contact-row .contact-text {
-        flex: 1 1 300px;
-    }
-
-    .contact-row .contact-logo img {
-        width: 120px;
-        height: auto;
-    }
-
-.prompt {
-    color: #22c55e;
-}
-
-.cmd {
-    color: #e5e7eb;
-}
-
-/* ===== SECTIONS ===== */
-section {
-    margin-top: 30px;
-}
-
-h2 {
-    margin-bottom: 15px;
-    color: #22c55e;
-}
-
-ul {
-    list-style: none;
-}
-
-li::before {
-    content: "› ";
-    color: #22c55e;
-}
-
-/* ===== FOOTER ===== */
-footer {
-    text-align: center;
-    margin: 30px 0;
-    color: #16a34a;
-    font-size: 0.9rem;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-    .terminal {
-        margin: 20px;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Порівняння акумуляторних тримерів ProCraft та DTK-48</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .sub {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            vertical-align: top;
+            text-align: left;
+        }
+        th {
+            background-color: #27ae60;
+            color: white;
+            font-size: 1.1em;
+            text-align: center;
+        }
+        td:first-child {
+            background-color: #f9f9f9;
+            font-weight: bold;
+            width: 30%;
+        }
+        td {
+            background-color: #fff;
+        }
+        .model-img {
+            text-align: center;
+        }
+        .model-img img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .price {
+            font-size: 1.2em;
+            color: #e67e22;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 6px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.8em;
+            color: #95a5a6;
+            margin-top: 20px;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+        @media (max-width: 768px) {
+            td, th {
+                font-size: 0.85em;
+                padding: 8px;
+            }
+            .model-img img {
+                max-width: 100px;
+            }
+        }
+    </style>
 </head>
-
 <body>
+<div class="container">
+    <h1>🌿 Порівняння акумуляторних тримерів</h1>
+    <div class="sub">ProCraft PTA-24, Procraft PTA25, DTK-48</div>
 
-<div class="terminal">
-    <div class="header">
-        <div class="dot red"></div>
-        <div class="dot yellow"></div>
-        <div class="dot green"></div>
+    <table>
+        <thead>
+            <tr>
+                <th>Характеристика</th>
+                <th>ProCraft PTA-24</th>
+                <th>Procraft PTA25</th>
+                <th>DTK-48</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Зовнішній вигляд</td>
+                <td class="model-img"><img src="https://epicentrk.ua/content/dam/epicentr/products/030242-trymer-akumuliatornyi-procraft-pta-24-2-akb-20v-2ah-ta-zp-1.jpg" alt="ProCraft PTA-24" onerror="this.src='https://via.placeholder.com/150?text=PTA-24'"></td>
+                <td class="model-img"><img src="https://procraft.ua/image/cache/catalog/ProCraft/PTA25/PTA25-1-450x450.jpg" alt="Procraft PTA25" onerror="this.src='https://via.placeholder.com/150?text=PTA25'"></td>
+                <td class="model-img"><img src="https://content1.rozetka.com.ua/goods/images/big/511713074.jpg" alt="DTK-48" onerror="this.src='https://via.placeholder.com/150?text=DTK-48'"></td>
+            </tr>
+            <tr><td>Ціна</td><td class="price">1 589 грн</td><td class="price">1 935 грн</td><td class="price">1 620 грн</td></tr>
+            <tr><td>Напруга акумулятора</td><td>21 В</td><td>20 В</td><td>48 В</td></tr>
+            <tr><td>Ємність акумулятора</td><td>2.0 Ah (2 шт) *уточнено з інших джерел</td><td>2.0 Ah (2 шт)</td><td>2.0 Ah (2 шт)</td></tr>
+            <tr><td>Тип двигуна</td><td>Щітковий</td><td>Щітковий</td><td>Безщітковий (за даними відео)</td></tr>
+            <tr><td>Макс. оберти</td><td>8000 об/хв</td><td>9000 об/хв</td><td>до 10000 об/хв</td></tr>
+            <tr><td>Ширина різу</td><td>150 мм</td><td>150 мм</td><td>230 мм</td></tr>
+            <tr><td>Штанга</td><td>Телескопічна</td><td>Телескопічна (67–93 см)</td><td>Телескопічна (90–122 см)</td></tr>
+            <tr><td>Вага</td><td>2.1 кг</td><td>3.9 кг</td><td>1.5 кг</td></tr>
+            <tr><td>Рівень шуму</td><td>94 дБ</td><td>75 дБ(А)</td><td>н/д</td></tr>
+            <tr><td>Комплектація</td><td>2 АКБ, ЗП, 2 металевих ножі, 5 пластикових ножів, диск</td><td>2 АКБ, ЗП, 5 пластикових ножів, 2 металевих ножі, диск, 6 котушок, колеса, платформи</td><td>2 АКБ, ЗП, колеса, ключ, інструкція</td></tr>
+            <tr><td>Гарантія</td><td>1 рік</td><td>36 місяців</td><td>14 днів на повернення</td></tr>
+            <tr><td>Посилання</td><td><a href="https://epicentrk.ua/ua/shop/trymer-akumuliatornyi-procraft-pta-24-2-akb-20v-2ah-ta-zp.html" target="_blank" class="btn">Epicentr</a></td><td><a href="https://procraft.ua/ua/akkumuljatornyj-instrument/akkumuljatornye-kosy/akumulyatorna-kosa-procraft-pta25-2-akb" target="_blank" class="btn">Procraft.ua</a></td><td><a href="https://rozetka.com.ua/ua/511713074/p511713074/" target="_blank" class="btn">Rozetka</a></td></tr>
+        </tbody>
+    </table>
+
+    <div style="background: #ecf0f1; padding: 15px; border-radius: 8px;">
+        <h3>💡 Рекомендації:</h3>
+        <ul>
+            <li><strong>ProCraft PTA-24</strong> – оптимальний для невеликих ділянок, легкий і доступний.</li>
+            <li><strong>Procraft PTA25</strong> – найкраща комплектація (є колеса, багато насадок) і довга гарантія 3 роки.</li>
+            <li><strong>DTK-48</strong> – найлегший (1.5 кг) і потужний за напругою (48 В), підходить для великих трав’янистих площ.</li>
+        </ul>
+        <p>📌 <strong>Як зберегти як PDF:</strong> натисніть Ctrl+P (Cmd+P на Mac) → виберіть "Зберегти як PDF" → налаштуйте масштаб (50-70%) для вміщення таблиці.</p>
     </div>
-
-    <div class="content">
-        <div class="line">
-            <span class="prompt">sysadmin@it:~$</span>
-            <span class="cmd">whoami</span>
-        </div>
-        <div class="line">System Administrator / IT Outsourcing</div>
-
-        <section>
-            <div class="line">
-                <span class="prompt">sysadmin@it:~$</span>
-                <span class="cmd">services</span>
-            </div>
-            <ul>
-                <li>IT-поддержка пользователей</li>
-                <li>Консультации по IT-вопросам</li>
-                <li>Администрирование Windows / Linux</li>
-                <li>Сети, VPN, Mikrotik, Wi-Fi</li>
-                <li>Серверы, резервное копирование</li>
-                <li>IT-аутсорсинг для дома и бизнеса</li>
-            </ul>
-        </section>
-
-        <section>
-            <div class="line">
-                <span class="prompt">sysadmin@it:~$</span>
-                <span class="cmd">why_me</span>
-            </div>
-            <ul>
-                <li>Быстрая реакция</li>
-                <li>Практичный подход</li>
-                <li>Без лишней бюрократии</li>
-                <li>Удалённо</li>
-            </ul>
-        </section>
-
-        <section>
-            <div class="line">
-                <span class="prompt">sysadmin@it:~$</span>
-                <span class="cmd">contact</span>
-            </div>
-            <div class="contact-row">
-                <div class="contact-text">
-                    <p>Email: bob.kovalsky@ukr.net</p>
-                    <p>Site: <a href="https://phone-bighearted-ivy.tilda.ws/" target="_blank">https://phone-bighearted-ivy.tilda.ws/</a></p>
-                    <p>Telegram: https://t.me/B_o_B_Ka_76</p>
-                </div>
-            </div>
-        </section>
+    <div class="footer">
+        Дані зібрано на основі відкритих джерел: Epicentr, Procraft.ua, Rozetka, YouTube-огляди. Станом на травень 2026 року.
     </div>
 </div>
-
-<a href="https://phone-bighearted-ivy.tilda.ws/" target="_blank" rel="noopener noreferrer">
-    <img class="big-side-image" alt="Большая картинка справа" src="https://optim.tildacdn.ink/tild3065-3139-4437-b435-643333346439/-/format/webp/photo-1573165265437-.jpg.webp">
-</a>
-
-<footer>
-<a target="_blank" href="https://nic.ua/ru/signup/vgreayqn"><img alt="При поддержке NIC.UA" src="https://nic.ua/assets/i/referral/banner-rus.png?version=v351">
-
-<a target="_blank" href="https://tilda.cc/?r=n2o8ohj"><img alt="При поддержке Tilda.cc" src="https://png.klev.club/uploads/posts/2024-05/png-klev-club-zeph-p-tilda-logotip-png-14.png" width="100" height="auto" style="width:100px; height:auto;"></a>
-<br>
-© 2026 sysadmin@it
-</footer>
-
 </body>
 </html>
